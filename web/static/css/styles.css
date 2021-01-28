@@ -1,0 +1,184 @@
+@import "global.css";
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+
+:root {
+    --green: #19BA3C;
+}
+
+header {
+    width: 100%;
+    padding: 4rem 0;
+    background: #E2FEE8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.logo {
+    fill: #000;
+}
+
+.special {
+    fill: #19BA3C;
+}
+
+header section {
+    width: 90%;
+    margin-top: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header section figure svg {
+    width: 377px;
+    height: 273px;
+}
+
+@media (max-width: 768px) {
+    header section {
+        flex-direction: column-reverse;
+    }
+
+    header section aside,
+    header section figure {
+        margin: 2rem 0;
+    }
+}
+
+aside h1 {
+    font-size: 38px;
+    color: #19BA3C;
+}
+
+aside h4 {
+    margin-top: 0.4rem;
+    font-size: 26px;
+    color: #124D1F;
+    font-weight: normal;
+}
+
+aside button {
+    margin-top: 2rem;
+    border-radius: 8px;
+    font-weight: bold;
+    color: #fff;
+    background: #19BA3C;
+    width: 100%;
+    font-size: 22px;
+    opacity: 0.5;
+    padding: 1.4rem 0;
+    transition: .2s;
+    cursor: pointer;
+}
+
+aside button:hover {
+    opacity: 1;
+}
+
+main {
+    width: 100%;
+    padding: 4rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+main section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+main h1 {
+    text-align: center;
+}
+
+main .card {
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #E2FEE8;
+    box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.1);
+    opacity: 0.5;
+    transition: .2s;
+    cursor: pointer;
+}
+
+.card:hover {
+    opacity: 1;
+}
+
+main article {
+    padding: 1rem;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+main article h4, span {
+    font-size: 28px;
+}
+
+span {
+    font-family: "Secular One";
+    color: #124D1F;
+}
+
+main article span:first-child {
+    align-self: flex-start;
+}
+
+main article span:last-child {
+    align-self: flex-end;
+}
+
+main article h4:nth-child(2) {
+    text-align: center;
+    margin: 1.4rem;
+}
+
+@media (max-width: 425px) {
+    header section figure svg {
+        width: 200px;
+        height: 145px;
+    }
+
+    main article {
+        flex-direction: column;
+    }
+
+    main article span:first-child {
+        align-self: center;
+    }
+
+    main article h4 {
+        font-size: 22px;
+    }
+
+    main article span:last-child {
+        display: none;
+    }
+
+    aside h1 {
+        font-size: 32px;
+    }
+
+    aside h4 {
+        font-size: 22px;
+    }
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background: #E2FEE8;
+}
