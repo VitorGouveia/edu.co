@@ -7,7 +7,7 @@
 
 header {
     width: 100%;
-    padding: 4rem 0;
+    padding: 1rem 0;
     background: #E2FEE8;
     display: flex;
     flex-direction: column;
@@ -15,17 +15,12 @@ header {
     justify-content: flex-start;
 }
 
-.logo {
-    fill: #000;
-}
-
 .special {
-    fill: #19BA3C;
+    fill: var(--green);
 }
 
 header section {
     width: 90%;
-    margin-top: 4rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -54,7 +49,7 @@ aside h4 {
     font-weight: normal;
 }
 
-aside a {
+header aside a {
     text-align: center;
     margin-top: 2rem;
     text-decoration: none;
@@ -70,21 +65,62 @@ aside a {
     cursor: pointer;
 }
 
-aside a:hover {
+header aside a:hover {
     opacity: 1;
 }
 
 main {
     width: 100%;
-    padding: 4rem 0;
+    padding: 4rem 2rem;
     display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+main aside ul li:first-child {
+    list-style-type: none;
+}
+
+main aside ul li:first-child span {
+    display: none;
+}
+
+main aside ul {
+    display: flex;
+    justify-content: left;
     flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
+}
+
+main aside ul li:not(li:first-child) {
+    padding: 0.4rem 1.2rem;
+    list-style-type: disc;
+    opacity: 0.5;
+    align-self: flex-end;
+    transition: .2s;
+    cursor: pointer;
+    margin: 0.6rem 0;
+    font-size: 1.2rem;
+}
+
+main aside ul li:not(li:first-child):hover {
+    opacity: 1;
+}
+
+main aside ul li:not(li:first-child)::marker {
+    color: var(--green);
 }
 
 main section {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main section .cards {
+    display: flex;
+    flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
 }
@@ -105,39 +141,16 @@ main .card {
     opacity: 0.5;
     transition: .2s;
     cursor: pointer;
+    user-select: none;
+    pointer-events: visible;
 }
 
 .card:hover {
     opacity: 1;
 }
 
-main article {
-    padding: 1rem;
-    margin-top: 2rem;
-    display: flex;
-    justify-content: space-around;
-}
-
-main article h4, span {
-    font-size: 28px;
-}
-
-span {
-    font-family: "Secular One";
-    color: #19BA3C;
-}
-
-main article span:first-child {
-    align-self: flex-start;
-}
-
-main article span:last-child {
-    align-self: flex-end;
-}
-
-main article h4:nth-child(2) {
-    text-align: center;
-    margin: 1.4rem;
+.card img {
+    pointer-events: none;
 }
 
 
@@ -152,34 +165,30 @@ main article h4:nth-child(2) {
     }
 }
 
+@media (max-width: 475px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    main aside ul {
+        display: none;
+    }
+}
+
 @media (max-width: 425px) {
     header section figure svg {
         width: 200px;
         height: 145px;
     }
 
-    main article {
-        flex-direction: column;
-    }
-
-    main article span:first-child {
-        align-self: center;
-    }
-
-    main article h4 {
-        font-size: 22px;
-    }
-
-    main article span:last-child {
-        display: none;
-    }
-
     aside h1 {
-        font-size: 32px;
+        font-size: 30px;
     }
-
+ 
     aside h4 {
-        font-size: 22px;
+        font-size: 20px;
     }
 }
 

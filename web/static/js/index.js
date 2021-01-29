@@ -6,3 +6,14 @@ if("serviceWorker" in navigator) {
         console.log(err)
     }
 }
+
+// const $ = document.querySelector.bind(document)
+
+// html = {
+//     modal: $(".modal"),
+//     modal_button: $(".modal button") 
+// }
+
+// html.modal_button.addEventListener("click", () => {
+//     html.modal.classList.toggle("hide")
+// })
