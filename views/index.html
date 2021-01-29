@@ -9,10 +9,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Edu.co</title>
+    <link rel="icon" href="/assets/logo.svg">
 
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="manifest" href="../public/manifest.webmanifest">
-    <script defer src="../js/index.js"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="manifest" href="/public/manifest.webmanifest">
+    <script defer src="/js/index.js"></script>
 </head>
 <body>
     <div class="home-container">
@@ -38,7 +39,7 @@
                 <aside>
                     <h1>Aprender ficou mais<br> fácil do que nunca</h1>
                     <h4>O que você vai aprender hoje?</h4>
-                    <a href="cursos.html">Ver todos os cursos --></a>
+                    <a href="/cursos">Ver todos os cursos --></a>
                 </aside>
 
                 <figure>
@@ -114,27 +115,33 @@
         </header>
 
         <main>
-            <h1>Aprenda o que quiser</h1>
             <section>
-                <div class="card">
+                <!-- <div class="card">
                     <h4>Cursos de programação</h4>
-                    <img src="../assets/code.svg">
+                    <img src="/assets/code.svg">
                 </div>
 
                 <div class="card">
                     <h4>Cursos de programação</h4>
-                    <img src="../assets/code.svg">
+                    <img src="/assets/code.svg">
                 </div>
 
                 <div class="card">
                     <h4>Cursos de programação</h4>
-                    <img src="../assets/code.svg">
+                    <img src="/assets/code.svg">
                 </div>
 
                 <div class="card">
                     <h4>Cursos de programação</h4>
-                    <img src="../assets/code.svg">
-                </div>
+                    <img src="/assets/code.svg">
+                </div> -->
+
+                {% for course in courses %}
+                    <div class="card" onclick="redirectBlank(`{{course.link}}`)">
+                        <h4>{{course.nome}}</h4>
+                        <img width="166" height="166" src="{{course.image}}" alt="{{course.nome}}">
+                    </div>
+                {% endfor %}
             </section>
 
             <article>
@@ -159,7 +166,7 @@
                     fill=""
                 />
             </svg>
-            <a href="cadastrar.html">gostaria de cadastrar um curso?</a>
+            <a href="/register">gostaria de cadastrar um curso?</a>
         </footer>
     </div>
 </body>

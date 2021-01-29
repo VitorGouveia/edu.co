@@ -7,13 +7,6 @@ if("serviceWorker" in navigator) {
     }
 }
 
-// const $ = document.querySelector.bind(document)
-
-// html = {
-//     modal: $(".modal"),
-//     modal_button: $(".modal button") 
-// }
-
-// html.modal_button.addEventListener("click", () => {
-//     html.modal.classList.toggle("hide")
-// })
+const redirectBlank = url => {
+    window.open(url, '_blank');
+}

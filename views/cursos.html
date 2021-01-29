@@ -9,10 +9,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Edu.co</title>
+    <link rel="icon" href="/assets/logo.svg">
 
-    <link rel="stylesheet" href="../css/cursos.css">
-    <link rel="manifest" href="../public/manifest.webmanifest">
-    <script defer src="../js/index.js"></script>
+    <link rel="stylesheet" href="/css/cursos.css">
+    <link rel="manifest" href="/public/manifest.webmanifest">
+    <script defer src="/js/index.js"></script>
 </head>
 <body>
     <div class="home-container">
@@ -179,7 +180,7 @@
         </header>
 
         <main>
-            <aside>
+            <!-- <aside>
                 <ul>
                     <li><h4 class="title">Categorias</h6></li>
                     <li><a>Tecnologia</a></li>
@@ -190,49 +191,55 @@
                     <li><a>Tecnologia</a></li>
                     <li><a>Tecnologia</a></li>
                 </ul>
-            </aside>
+            </aside> -->
             <section>
                 <h1>Nossos cursos</h1>
                 <div class="cards">
-                    <div class="card">
+                    {% for course in courses %}
+                        <div class="card" onclick="redirectBlank(`{{course.link}}`)">
+                            <h4>{{course.nome}}</h4>
+                            <img width="166" height="166" src="{{course.image}}" alt="{{course.nome}}">
+                        </div>
+                    {% endfor %}
+                    <!-- <div class="card">
                         <h4>Cursos de programação</h4>
-                        <img src="../assets/code.svg">
+                        <img src="/assets/code.svg">
                     </div>
     
                     <div class="card">
                         <h4>Cursos de programação</h4>
-                        <img src="../assets/code.svg">
+                        <img src="/assets/code.svg">
                     </div>
     
                     <div class="card">
                         <h4>Cursos de programação</h4>
-                        <img src="../assets/code.svg">
+                        <img src="/assets/code.svg">
                     </div>
     
                     <div class="card">
                         <h4>Cursos de programação</h4>
-                        <img src="../assets/code.svg">
+                        <img src="/assets/code.svg">
                     </div>
 
                     <div class="card">
                         <h4>Cursos de programação</h4>
-                        <img src="../assets/code.svg">
+                        <img src="/assets/code.svg">
                     </div>
     
                     <div class="card">
                         <h4>Cursos de programação</h4>
-                        <img src="../assets/code.svg">
+                        <img src="/assets/code.svg">
                     </div>
     
                     <div class="card">
                         <h4>Cursos de programação</h4>
-                        <img src="../assets/code.svg">
+                        <img src="/assets/code.svg">
                     </div>
     
                     <div class="card">
                         <h4>Cursos de programação</h4>
-                        <img src="../assets/code.svg">
-                    </div>
+                        <img src="/assets/code.svg">
+                    </div> -->
                 </div>
             </section>
         </main>
@@ -252,7 +259,7 @@
                     fill=""
                 />
             </svg>
-            <a href="cadastrar.html">gostaria de cadastrar um curso?</a>
+            <a href="/register">gostaria de cadastrar um curso?</a>
         </footer>
     </div>
 </body>

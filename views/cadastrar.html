@@ -9,22 +9,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Edu.co</title>
+    <link rel="icon" href="/assets/logo.svg">
 
-    <link rel="stylesheet" href="../css/cadastrar.css">
-    <link rel="manifest" href="../public/manifest.webmanifest">
-    <script defer src="../js/index.js"></script>
+    <link rel="stylesheet" href="/css/cadastrar.css">
+    <link rel="manifest" href="/public/manifest.webmanifest">
+    <script defer src="/js/index.js"></script>
 </head>
 <body>
     <div class="register-container">
         <main>            
             <h1>Registre seu curso</h1>
-            <form action="">
-                <input type="text" required placeholder="nome do curso">
+            <form method="POST">
+                <input name="nome" type="text" required placeholder="nome do curso">
 
-                <input type="url" required placeholder="link do curso">
-                <input type="url" required placeholder="imagem do curso">
+                <input name="link" type="url" required placeholder="link do curso">
+                <input name="image" type="url" required placeholder="imagem do curso">
 
-                <a>Voltar</a>
+                <a href="/">Voltar</a>
                 <button>Confirmar</button>
             </form>
         </main>
