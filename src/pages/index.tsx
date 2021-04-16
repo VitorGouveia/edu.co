@@ -2,20 +2,37 @@ import { Button } from "./components/Button"
 import { Logo } from "./components/Logo"
 
 export default function Home() {
-  const themeColor = "#8257e6"
+  const theme = {
+    primary: "#8257e6",
+    primaryLight: "#9466ff"
+  }
 
   return (
     <>
-      <Logo 
-        color={themeColor}
-      />
+      <header style={{ background: theme.primaryLight }}>
+        <Logo color={theme.primary} />
 
-      <Button 
-        text="Veja mais cursos"
-        href="/" 
-        buttonType="button"
-        color={themeColor}
-      />
+        <article>
+          <section>
+            <h2>
+              Aprender ficou mais fácil do que nunca
+            </h2>
+
+            <p>O que você vai aprender hoje?</p>
+          </section>
+
+          <Button
+            text="Veja todos os cursos"
+            href="/cursos"
+            buttonType="button"
+            color={theme.primary}
+          />
+        </article>  
+      </header>
+
+      <main>
+        <h1>Apenda o que quiser</h1>
+      </main>
     </>
   )
 }

@@ -1,4 +1,16 @@
+#logo {
+  display: flex;
+
+  padding: 1rem;
+
+  align-items: center;
+  justify-content: center;
+}
+
+#logo .text {
+  margin-left: 1rem;
+}
+
 #logo span {
-  font-weight: bold;
   font-size: 2rem;
 }

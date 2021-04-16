@@ -8,6 +8,7 @@ button {
 
   align-items: center;
   justify-content: space-around;
+  color: inherit;
 }
 
 button:hover {
@@ -22,7 +23,7 @@ button span {
   display: inline-flex;
   align-items: center;
   padding: 0 24px;
-  color: #fff;
+  color: inherit;
 
   height: 100%;
   transition: all .2s;
