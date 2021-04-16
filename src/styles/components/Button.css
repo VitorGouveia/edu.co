@@ -1,0 +1,70 @@
+button {
+  display: inline-flex;
+  height: 50px;
+  border-radius: 0.3rem;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all .2s;
+
+  align-items: center;
+  justify-content: space-around;
+}
+
+button:hover {
+  filter: brightness(0.8);
+}
+
+button:active, button:focus {
+  filter: brightness(0.7);
+}
+
+button span {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 24px;
+  color: #fff;
+
+  height: 100%;
+  transition: all .2s;
+}
+
+button.loading::after {
+  content: "";
+  display: inline-flex;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  /* top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; */
+  margin: auto;
+  border: 4px solid transparent;
+  border-top-color: #fafafa;
+  border-radius: 50%;
+  animation: button-loading-spinner 1s ease infinite;
+}
+
+@keyframes button-loading-spinner {
+  from {
+    transform: rotate(0turn);
+  }
+
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+button.loading span:nth-child(1), 
+button.loading span:nth-child(2) {
+  visibility: hidden;
+  opacity: 0;
+}
+
+button span:nth-child(1) {
+  font-size: 1rem;
+}
+
+button span:nth-child(2) {
+  background: rgba(0, 0, 0, 0.08);
+}
