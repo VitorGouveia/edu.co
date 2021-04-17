@@ -11,6 +11,7 @@ div#card {
   padding: 2rem;
 
   border-radius: 1rem;
+  cursor: pointer;
 }
 
 div#card .img-zoom {
@@ -18,11 +19,13 @@ div#card .img-zoom {
 }
 
 div#card .img-zoom img {
-  transition: all .5s;
+  user-select: none;
+  pointer-events: none;
+  transition: all .4s;
 }
 
-div#card .img-zoom:hover img {
-  transform: scale(1.2);
+div#card:hover img {
+  transform: scale(1.1);
 } 
 
 div#card p {

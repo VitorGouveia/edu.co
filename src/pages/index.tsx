@@ -4,6 +4,8 @@ import { Card } from "@components/Card"
 import { GetServerSideProps } from "next"
 import { prisma } from "../prisma"
 import { Item } from "@prisma/client"
+import { useEffect } from "react"
+import { Footer } from "@components/Footer" 
 
 interface HomeProps {
   items: Item[]
@@ -11,11 +13,18 @@ interface HomeProps {
 
 export default function Home({ items }: HomeProps) {
   const theme = {
-    primary: "#8257e6",
-    primaryLight: "#9466ff",
+    primary: "hsl(258, 74%, 62%)",
+    primaryLight: "hsl(258, 100%, 70%)",
+    primaryDark: "hsl(258, 90%, 60%)",
     primaryText: "#2e0098",
-    secondaryText: "#fafafa"
+    secondaryText: "#fafafa",
+    darkText: "hsl(272, 82%, 46%)"
   }
+
+  useEffect(() => {
+    window.localStorage.setItem("theme", "default")
+  }, [])
+
 
   return (
     <>
@@ -64,7 +73,19 @@ export default function Home({ items }: HomeProps) {
             )
           })}
         </section>
+
+        <article>
+          <span style={{ color: theme.primaryText }} >"</span>
+          <h4 style={{ color: theme.primaryText }} >Eu e o meu filho aprendemos muito com essa plataforma, recomendo muito, 10/10</h4>
+          <span style={{ color: theme.primaryText }} >"</span>
+        </article>
       </main>
+
+
+      <Footer
+        background={theme.primaryDark}
+        color={theme.primaryLight}
+      />
     </>
   )
 }
@@ -79,7 +100,9 @@ export const getServerSideProps: GetServerSideProps = async () => {
   }) 
 
 
-  const items = await prisma.item.findMany()
+  const items = await prisma.item.findMany({ 
+    take: 6
+  })
   
   return {
     props: {
