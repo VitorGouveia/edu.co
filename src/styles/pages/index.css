@@ -93,6 +93,7 @@ main article h4 {
   width: 60%;
   font-size: 2rem;
   margin: 2rem 0;
+  text-align: center;
 }
 
 main article span:first-child {
@@ -103,4 +104,29 @@ main article span:first-child {
 main article span:last-child {
   align-self: flex-end;
   transform: rotate(0deg);
+}
+
+@media (max-width: 768px) {
+  main section #card:nth-child(4),
+  main section #card:nth-child(5),
+  main section #card:nth-child(6) {
+    display: none;
+  }
+
+  main article {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  main article h4 {
+    width: 100%;
+  }
+
+  main article span:first-child {
+    align-self: center;
+  }
+
+  main article span:last-child {
+    display: none;
+  }
 }
