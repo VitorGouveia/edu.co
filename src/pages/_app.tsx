@@ -4,6 +4,7 @@ import "@styles/pages/index.css"
 
 import "@styles/components/Button.css"
 import "@styles/components/Logo.css"
+import "@styles/components/Card.css"
 
 function Educo({ Component, pageProps }) {
   return <Component {...pageProps} />
