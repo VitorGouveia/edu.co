@@ -1,26 +1,29 @@
 import { FiBookOpen } from "react-icons/fi"
 import Link from "next/link"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { FC } from "react"
 
 interface ButtonProps {
   text: string
   buttonType: "button" | "submit" | "reset"
   href: string
-  color: string
 }
 
-export const Button: FC<ButtonProps> = ({ text, buttonType, href, color }) => {
+export const Button: FC<ButtonProps> = ({ text, buttonType, href }) => {
   const [isLoading, setLoading] = useState(false)
 
   function load() {
     setLoading(!isLoading)
+
+    setTimeout(() => {
+      window.location.href = href
+    }, 700)
   }
+
 
   return (
     <>
       <button 
-        style={{ background: color }} 
         type={buttonType}
         onClick={() => load()}
         className={isLoading ? "loading": null}

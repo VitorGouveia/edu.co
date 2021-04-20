@@ -1,10 +1,10 @@
 import { HeadConfig } from "./headConfig"
 import { FC } from "react"
 
-export const Cursos: FC = () => {
+export default function Cursos() {
   return (
     <>
-      <HeadConfig title="Cursos" />
+      <HeadConfig title="courses" />
       <h1>cursos</h1>
     </>
   )

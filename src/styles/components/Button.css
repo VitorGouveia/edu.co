@@ -9,6 +9,7 @@ button {
   align-items: center;
   justify-content: space-around;
   color: inherit;
+  background: var(--primary);
 }
 
 button:hover {
@@ -41,7 +42,7 @@ button.loading::after {
   bottom: 0; */
   margin: auto;
   border: 0.4rem solid transparent;
-  border-top-color: #fafafa;
+  border-top-color: var(--white);
   border-radius: 50%;
   animation: button-loading-spinner 1s ease infinite;
 }

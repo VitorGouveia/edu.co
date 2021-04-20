@@ -12,6 +12,9 @@ div#card {
 
   border-radius: 1rem;
   cursor: pointer;
+
+  color: var(--white);
+  background: var(--dark-primary);
 }
 
 div#card .img-zoom {

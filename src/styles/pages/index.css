@@ -10,7 +10,8 @@ header {
   align-items: center;
   justify-content: space-between;
 
-  color: #f8f8f8;
+  color: var(--white);
+  background: var(--light-primary);
 }
 
 header article {
@@ -34,7 +35,8 @@ header article section {
 
 header article section p {
   margin-top: 0.5rem;
-  color: rgba(0, 0, 0, 0.08);
+  /* color: rgba(0, 0, 0, 0.08); */
+  color: var(--primary);
 }
 
 main {
@@ -80,17 +82,20 @@ main article {
   justify-content: space-around;
 
   align-items: center;
+  color: var(--dark-primary);
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
 
 main article span {
+  color: inherit;
   font-size: 3rem;
   font-family: "Secular One";
 }
 
 main article h4 {
   width: 60%;
+  color: inherit;
   font-size: 2rem;
   margin: 2rem 0;
   text-align: center;

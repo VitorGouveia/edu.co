@@ -1,6 +1,7 @@
 import '../styles/global.css'
 
 import "@styles/pages/index.css"
+import "@styles/theme.css"
 
 import "@styles/components/Button.css"
 import "@styles/components/Logo.css"

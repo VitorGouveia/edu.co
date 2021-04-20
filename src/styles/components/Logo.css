@@ -13,4 +13,9 @@
 
 #logo span {
   font-size: 2rem;
+  color: var(--dark-primary)
+}
+
+#logo svg {
+  color: var(--dark-primary)
 }

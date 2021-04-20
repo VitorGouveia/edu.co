@@ -1,0 +1,17 @@
+body {
+  --white: hsl(0, 0%, 98%);
+  --gray: hsl(0, 0%, 70%);
+  --black: hsl(0, 0%, 20%);
+}
+
+.default {
+  --light-primary: hsl(133, 76%, 70%);
+  --primary: hsl(133, 76%, 40%);
+  --dark-primary: hsl(133, 76%, 30%);
+}
+
+.omni {
+  --light-primary: hsl(258, 70%, 60%);
+  --primary: hsl(258, 70%, 40%);
+  --dark-primary: hsl(258, 100%, 30%);
+}
