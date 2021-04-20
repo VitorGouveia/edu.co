@@ -1,6 +1,12 @@
 import { Logo } from "@components/Logo"
+import { FC } from "react"
 
-export const Footer = ({ background, color }) => {
+interface FooterProps {
+  background: string
+  color: string
+}
+
+export const Footer: FC<FooterProps> = ({ background, color }) => {
   return (
     <footer style={{ background }}>
       <Logo color={color} />

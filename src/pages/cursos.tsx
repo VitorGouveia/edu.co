@@ -1,6 +1,7 @@
 import { HeadConfig } from "./headConfig"
+import { FC } from "react"
 
-export default function Cursos() {
+export const Cursos: FC = () => {
   return (
     <>
       <HeadConfig title="Cursos" />

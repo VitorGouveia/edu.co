@@ -1,6 +1,11 @@
 import { FiBookOpen } from "react-icons/fi"
+import { FC } from "react"
 
-export const Logo = ({ color }) => {
+interface LogoProps {
+  color: string
+}
+
+export const Logo: FC<LogoProps> = ({ color }) => {
   return (
     <section id="logo">
       <FiBookOpen color={color} size="32px" />

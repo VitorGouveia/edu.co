@@ -1,8 +1,16 @@
 import { FiBookOpen } from "react-icons/fi"
 import Link from "next/link"
 import { useState } from "react"
+import { FC } from "react"
 
-export const Button = ({ text, buttonType, href, color }) => {
+interface ButtonProps {
+  text: string
+  buttonType: "button" | "submit" | "reset"
+  href: string
+  color: string
+}
+
+export const Button: FC<ButtonProps> = ({ text, buttonType, href, color }) => {
   const [isLoading, setLoading] = useState(false)
 
   function load() {

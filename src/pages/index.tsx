@@ -7,12 +7,13 @@ import { Item } from "@prisma/client"
 import { useEffect } from "react"
 import { Footer } from "@components/Footer" 
 import { HeadConfig } from "./headConfig"
+import { FC } from "react"
 
 interface HomeProps {
   items: Item[]
 }
 
-export default function Home({ items }: HomeProps) {
+export const Home: FC<HomeProps> = ({ items }) => {
   const theme = {
     primary: "hsl(258, 74%, 62%)",
     primaryLight: "hsl(258, 100%, 70%)",
@@ -29,7 +30,7 @@ export default function Home({ items }: HomeProps) {
 
   return (
     <>
-      <HeadConfig title="Home" />
+      <HeadConfig title="home" />
       <header style={{ background: theme.primaryLight }}>
         <Logo color={theme.primary} />
 

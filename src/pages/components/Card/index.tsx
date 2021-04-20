@@ -1,4 +1,4 @@
-import Image from "next/image"
+import { FC } from "react"
 
 interface CardProps {
   text: string
@@ -8,7 +8,7 @@ interface CardProps {
   children: any
 }
 
-export const Card = ({ text, img, background, color, children }: CardProps) => {
+export const Card: FC<CardProps> = ({ text, img, background, color, children }) => {
   return (
     <>
       <div id="card" style={{ background, color }} >
