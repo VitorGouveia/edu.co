@@ -8,7 +8,7 @@ div#card {
   align-items: center;
   justify-content: space-between;
 
-  padding: 2rem;
+  padding: 2rem 1rem;
 
   border-radius: 1rem;
   cursor: pointer;

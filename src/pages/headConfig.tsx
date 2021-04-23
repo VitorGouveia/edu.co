@@ -2,7 +2,7 @@ import Head from "next/head"
 import { FC } from "react"
 
 interface HeadConfigProps {
-  title: "home" | "courses" | "login"
+  title: "home" | "cursos" | "login"
 }
 
 export const HeadConfig: FC<HeadConfigProps> = ({ title }) => {

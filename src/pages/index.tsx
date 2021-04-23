@@ -15,8 +15,8 @@ interface HomeProps {
 export default function Home({ items }: HomeProps) {
   useEffect(() => {
     window.localStorage.setItem("theme", "omni")
-
-    document.body.classList.add(window.localStorage.getItem("theme"))
+  
+    document.body.classList.add(localStorage.getItem("theme"))
   })
 
 
@@ -52,8 +52,8 @@ export default function Home({ items }: HomeProps) {
               <Card 
                 key={item.id} 
                 text={item.name} 
-                img={item.img}
-              >
+                img={item.img}>
+                  
                 <Button 
                   key={item.id}
                   text="Ver esse curso"

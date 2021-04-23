@@ -1,6 +1,7 @@
 body {
   --white: hsl(0, 0%, 98%);
-  --gray: hsl(0, 0%, 70%);
+  --light-gray: hsl(0, 0%, 70%);
+  --gray: hsl(0, 0%, 60%);
   --black: hsl(0, 0%, 20%);
 }
 
